@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: Shah9Sah.
+      MYSQL_DATABASE: ethereally
+      ports:
+        "3306:3306"
+  app:
+    build: .
+    container_name: ethereally-api
+    ports:
+      - "8080:8080"
