@@ -29,6 +29,7 @@ object Proxy {
     suspend fun proxyRequest(target_url: String, call: ApplicationCall) {
 
         // Добавьте логирование
+        println("Tryed send request to '$target_url'")
 
         try {
             val targetResponse = when (call.request.httpMethod) {

@@ -69,6 +69,8 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
     implementation("com.google.code.gson:gson:2.9.0")
+
+    implementation("io.ktor:ktor-server-cors:$ktor_version")
 }
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {

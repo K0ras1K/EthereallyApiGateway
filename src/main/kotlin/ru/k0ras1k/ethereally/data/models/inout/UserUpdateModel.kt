@@ -1,0 +1,9 @@
+package ru.k0ras1k.ethereally.data.models.inout
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class UserUpdateModel (
+    val email: String,
+    val about: String
+)

@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
 import io.ktor.server.engine.*
+import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.websocket.*
 import org.jetbrains.exposed.sql.Database
 import ru.k0ras1k.ethereally.plugins.configureJWT
@@ -29,6 +30,9 @@ fun Application.module() {
     )
 
     // "86.110.212.152"
+    install(CORS) {
+        anyHost()
+    }
     install(WebSockets) {
         pingPeriod = Duration.ofSeconds(15)
         timeout = Duration.ofSeconds(15)
